@@ -171,7 +171,7 @@ const weekdays=["Sun","Mon","Tue","Wed","Thu","Fri","Sat"]
 const key=(y,m,d)=>`${y}-${m+1}-${d}`
 
 const formatProfit=v=>{
-const k=(Math.abs(v)/10).toFixed()
+const k=(Math.abs(v)/100).toFixed()
 return v>=0?`$${k}`:`-$${k}`
 }
 
@@ -259,7 +259,7 @@ const total=(profit/10).toFixed()
 monthlyProfit.textContent=`$${total}`
 daysTraded.textContent=`${days}`
 
-const avg = days ? (profit/days/10).toFixed(1) : 0
+const avg = days ? (profit/days/1000).toFixed(1) : 0
 if(document.querySelector("#avgProfit"))
  document.querySelector("#avgProfit").textContent=`$${avg}`
 
